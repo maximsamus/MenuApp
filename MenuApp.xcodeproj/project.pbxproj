@@ -12,6 +12,7 @@
 		CF9AD7DE27EE432200145E3A /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9AD7DD27EE432200145E3A /* MenuTableViewController.swift */; };
 		CF9AD7E027EE434400145E3A /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9AD7DF27EE434400145E3A /* TabBarController.swift */; };
 		D14990A527EE5A2200DC0A0D /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14990A427EE5A2200DC0A0D /* Food.swift */; };
+		D14990A927EE606500DC0A0D /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14990A827EE606500DC0A0D /* Data.swift */; };
 		F71586B827EE3273007C9639 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71586B727EE3273007C9639 /* AppDelegate.swift */; };
 		F71586BA27EE3273007C9639 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71586B927EE3273007C9639 /* SceneDelegate.swift */; };
 		F71586BC27EE3273007C9639 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71586BB27EE3273007C9639 /* DetailViewController.swift */; };
@@ -26,6 +27,7 @@
 		CF9AD7DD27EE432200145E3A /* MenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewController.swift; sourceTree = "<group>"; };
 		CF9AD7DF27EE434400145E3A /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		D14990A427EE5A2200DC0A0D /* Food.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
+		D14990A827EE606500DC0A0D /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		F71586B427EE3273007C9639 /* MenuApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MenuApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F71586B727EE3273007C9639 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F71586B927EE3273007C9639 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -55,6 +57,14 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		D14990A727EE604200DC0A0D /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				D14990A827EE606500DC0A0D /* Data.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		F71586AB27EE3273007C9639 = {
 			isa = PBXGroup;
 			children = (
@@ -74,6 +84,7 @@
 		F71586B627EE3273007C9639 /* MenuApp */ = {
 			isa = PBXGroup;
 			children = (
+				D14990A727EE604200DC0A0D /* Services */,
 				D14990A627EE5A2B00DC0A0D /* Model */,
 				F71586CE27EE37DE007C9639 /* App */,
 				F71586CB27EE36F7007C9639 /* ViewControllers */,
@@ -200,6 +211,7 @@
 				CF9AD7E027EE434400145E3A /* TabBarController.swift in Sources */,
 				D14990A527EE5A2200DC0A0D /* Food.swift in Sources */,
 				F71586BA27EE3273007C9639 /* SceneDelegate.swift in Sources */,
+				D14990A927EE606500DC0A0D /* Data.swift in Sources */,
 				CF9AD7DC27EE431200145E3A /* TeamViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
