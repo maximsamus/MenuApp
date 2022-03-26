@@ -15,6 +15,7 @@
 		CF9AD7E027EE434400145E3A /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9AD7DF27EE434400145E3A /* TabBarController.swift */; };
 		D14990A527EE5A2200DC0A0D /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14990A427EE5A2200DC0A0D /* Food.swift */; };
 		D14990A927EE606500DC0A0D /* FoodData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14990A827EE606500DC0A0D /* FoodData.swift */; };
+		D19D5B9327EF35F300AD4F92 /* Developer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19D5B9227EF35F300AD4F92 /* Developer.swift */; };
 		F71586B827EE3273007C9639 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71586B727EE3273007C9639 /* AppDelegate.swift */; };
 		F71586BA27EE3273007C9639 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71586B927EE3273007C9639 /* SceneDelegate.swift */; };
 		F71586BC27EE3273007C9639 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71586BB27EE3273007C9639 /* DetailViewController.swift */; };
@@ -32,6 +33,7 @@
 		CF9AD7DF27EE434400145E3A /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		D14990A427EE5A2200DC0A0D /* Food.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
 		D14990A827EE606500DC0A0D /* FoodData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodData.swift; sourceTree = "<group>"; };
+		D19D5B9227EF35F300AD4F92 /* Developer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Developer.swift; sourceTree = "<group>"; };
 		F71586B427EE3273007C9639 /* MenuApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MenuApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F71586B727EE3273007C9639 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F71586B927EE3273007C9639 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -57,6 +59,7 @@
 			isa = PBXGroup;
 			children = (
 				D14990A427EE5A2200DC0A0D /* Food.swift */,
+				D19D5B9227EF35F300AD4F92 /* Developer.swift */,
 				41CEF62827EE7555003F3B95 /* Restaurant.swift */,
 			);
 			path = Model;
@@ -223,10 +226,11 @@
 				CF9AD7DA27EE430700145E3A /* ContactsViewController.swift in Sources */,
 				CF9AD7DE27EE432200145E3A /* MenuTableViewController.swift in Sources */,
 				F71586B827EE3273007C9639 /* AppDelegate.swift in Sources */,
+				D19D5B9327EF35F300AD4F92 /* Developer.swift in Sources */,
 				CF9AD7E027EE434400145E3A /* TabBarController.swift in Sources */,
 				D14990A527EE5A2200DC0A0D /* Food.swift in Sources */,
 				F71586BA27EE3273007C9639 /* SceneDelegate.swift in Sources */,
-				41CEF62627EE733B003F3B95 /* RestaurantData.swift in Sources */,
+				CF44744327EF38FB00F83FD2 /* TeamTableViewController.swift in Sources */,
 				D14990A927EE606500DC0A0D /* FoodData.swift in Sources */,
 				41CEF62627EE733B003F3B95 /* RestaurantData.swift in Sources */,
 				CF9AD7DC27EE431200145E3A /* TeamViewController.swift in Sources */,
