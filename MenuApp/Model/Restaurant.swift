@@ -15,6 +15,7 @@ struct Restaurant {
 extension Restaurant {
     
     static func getContact() -> Restaurant {
+
         Restaurant(
             title: "Tokyo",
             adress: "Trubnaya St., 21, Moscow 127051 Russia",
