@@ -9,7 +9,7 @@ class DataManager {
     
     static let shared = DataManager()
     
-    let title = "Tokyo"
+    let cafeTitle = "Tokyo"
     let adress = "Trubnaya St., 21, Moscow 127051 Russia"
     let numberPhone = 84951112233
     
