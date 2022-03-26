@@ -1,0 +1,50 @@
+    //
+    //  Developer.swift
+    //  MenuApp
+    //
+    //  Created by Konstantin Fomenkov on 26.03.2022.
+    //
+
+struct Developer {
+    
+    let fullname: String
+    let position: Position
+    let contacts: String
+}
+
+extension Developer {
+    static func getTeam() -> [Developer] {
+        [
+            Developer(
+                fullname: "Maxim Samus",
+                position: .teamLead,
+                contacts: "@max1m2"
+            ),
+            Developer(
+                fullname: "Paul Matar",
+                position: .developer,
+                contacts: "@pmatar"
+            ),
+            Developer(
+                fullname: "Alexej Dats",
+                position: .developer,
+                contacts: "@lex95us"
+            ),
+            Developer(
+                fullname: "Alexandr Barabash",
+                position: .developer,
+                contacts: "@AlexandrBarabash"
+            ),
+            Developer(
+                fullname: "Konstantin Fomenkov",
+                position: .developer,
+                contacts: "@CreoPride"
+            )
+        ]
+    }
+}
+
+enum Position: String {
+    case teamLead = "Team Leader"
+    case developer = "Developer"
+}
