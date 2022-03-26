@@ -17,9 +17,9 @@ extension Restaurant {
     
     static func getContact() -> Restaurant {
             Restaurant(
-                title: DataManager.shared.cafeTitle,
-                adress: DataManager.shared.adress,
-                numberPhone: DataManager.shared.numberPhone
+                title: RestaurantData.shared.cafeTitle,
+                adress: RestaurantData.shared.adress,
+                numberPhone: RestaurantData.shared.numberPhone
             )
     }
 }
