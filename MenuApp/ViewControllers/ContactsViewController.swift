@@ -10,16 +10,17 @@ import UIKit
 class ContactsViewController: UIViewController {
     
     @IBOutlet var mapImage: UIImageView!
-    var restaurant: Restaurant!
     @IBOutlet var restaurantLabel: UILabel!
     @IBOutlet var addressLabel: UILabel!
     @IBOutlet var phoneLabel: UILabel!
     
+    private let restaurant = Restaurant.getContact()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-//        titleLabel.text = restaurant.cafeTitle
-//        adressLadel.text = restaurant.adress
-//        phoneNumberLabel.text = "Tel: \(restaurant.numberPhone)"
+        restaurantLabel.text = restaurant.title
+        addressLabel.text = restaurant.adress
+        phoneLabel.text = "Tel: \(restaurant.numberPhone)"
     }
 }
