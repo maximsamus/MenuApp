@@ -53,14 +53,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		41CEF62727EE7500003F3B95 /* Services */ = {
-			isa = PBXGroup;
-			children = (
-				41CEF62527EE733B003F3B95 /* DataManager.swift */,
-			);
-			path = Services;
-			sourceTree = "<group>";
-		};
 		D14990A627EE5A2B00DC0A0D /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -73,6 +65,7 @@
 		D14990A727EE604200DC0A0D /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				41CEF62527EE733B003F3B95 /* DataManager.swift */,
 				D14990A827EE606500DC0A0D /* FoodBase.swift */,
 			);
 			path = Services;
@@ -97,7 +90,6 @@
 		F71586B627EE3273007C9639 /* MenuApp */ = {
 			isa = PBXGroup;
 			children = (
-				41CEF62727EE7500003F3B95 /* Services */,
 				D14990A727EE604200DC0A0D /* Services */,
 				D14990A627EE5A2B00DC0A0D /* Model */,
 				F71586CE27EE37DE007C9639 /* App */,
@@ -132,7 +124,7 @@
 		F71586CD27EE37C9007C9639 /* Resourses */ = {
 			isa = PBXGroup;
 			children = (
-				F71586C027EE3275007C9639 /* Assets.xcassets */,
+				F7728AB227EF1E1E0083D931 /* Food Photos */,
 			);
 			path = Resourses;
 			sourceTree = "<group>";
@@ -145,6 +137,14 @@
 				F71586B727EE3273007C9639 /* AppDelegate.swift */,
 			);
 			path = App;
+			sourceTree = "<group>";
+		};
+		F7728AB227EF1E1E0083D931 /* Food Photos */ = {
+			isa = PBXGroup;
+			children = (
+				F71586C027EE3275007C9639 /* Assets.xcassets */,
+			);
+			path = "Food Photos";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
