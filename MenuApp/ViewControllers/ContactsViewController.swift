@@ -8,22 +8,14 @@
 import UIKit
 
 class ContactsViewController: UIViewController {
-
+    
+    var restaurant: Restaurant!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        titleLabel.text = restaurant.title
+        adressLadel.text = restaurant.adress
+        phoneNumberLabel.text = "Tel: \(restaurant.numberPhone)"
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
