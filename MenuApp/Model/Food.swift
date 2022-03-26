@@ -30,11 +30,11 @@ extension Food {
 
         var foods: [Food] = []
 
-        let names = FoodBase.shared.names
-        let image = FoodBase.shared.image
-        let price = FoodBase.shared.price
-        let calories = FoodBase.shared.calories
-        let categories = FoodBase.shared.category
+        let names = FoodData.shared.names
+        let image = FoodData.shared.image
+        let price = FoodData.shared.price
+        let calories = FoodData.shared.calories
+        let categories = FoodData.shared.category
 
         let iterations = min(
             names.count,
