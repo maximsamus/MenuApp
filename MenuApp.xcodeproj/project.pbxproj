@@ -132,7 +132,7 @@
 		F71586CD27EE37C9007C9639 /* Resourses */ = {
 			isa = PBXGroup;
 			children = (
-				F71586C027EE3275007C9639 /* Assets.xcassets */,
+				F7728AB227EF1E1E0083D931 /* Food Photos */,
 			);
 			path = Resourses;
 			sourceTree = "<group>";
@@ -145,6 +145,14 @@
 				F71586B727EE3273007C9639 /* AppDelegate.swift */,
 			);
 			path = App;
+			sourceTree = "<group>";
+		};
+		F7728AB227EF1E1E0083D931 /* Food Photos */ = {
+			isa = PBXGroup;
+			children = (
+				F71586C027EE3275007C9639 /* Assets.xcassets */,
+			);
+			path = "Food Photos";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
