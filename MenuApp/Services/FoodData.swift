@@ -1,5 +1,5 @@
 //
-//  FoodBase.swift
+//  FoodData.swift
 //  MenuApp
 //
 //  Created by Konstantin Fomenkov on 25.03.2022.
@@ -7,9 +7,9 @@
 
 import Foundation
 
-class FoodBase {
+class FoodData {
 
-    static let shared = FoodBase()
+    static let shared = FoodData()
 
     let names = ["Борщ", "Солянка", "Куриный бульон", "Жаркое", "Плов", "Паста", "Медовик", "Сорбет", "Чай", "Кофе"]
     let category: [FoodCategories] = [.soups, .soups, .soups, .mainCourses, .mainCourses, .mainCourses, .deserts, .deserts, .drinks, .drinks]

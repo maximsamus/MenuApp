@@ -1,13 +1,13 @@
 //
-//  DataManager.swift
+//  RestaurantData.swift
 //  MenuApp
 //
 //  Created by Alexandr Barabash on 26.03.2022.
 //
 
-class DataManager {
+class RestaurantData {
     
-    static let shared = DataManager()
+    static let shared = RestaurantData()
     
     let cafeTitle = "Tokyo"
     let adress = "Trubnaya St., 21, Moscow 127051 Russia"
