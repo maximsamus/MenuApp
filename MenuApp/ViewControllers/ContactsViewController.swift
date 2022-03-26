@@ -18,7 +18,7 @@ class ContactsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-//        titleLabel.text = restaurant.title
+//        titleLabel.text = restaurant.cafeTitle
 //        adressLadel.text = restaurant.adress
 //        phoneNumberLabel.text = "Tel: \(restaurant.numberPhone)"
     }
