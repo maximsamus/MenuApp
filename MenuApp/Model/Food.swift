@@ -10,26 +10,59 @@ import Foundation
 struct Food {
 
     let name: String
-    let category: String
-    let ingredients: [String]
     let image: String
-    let calories: Int
     let price: Int
+    let category: FoodCategories
+    let calories: Int
+//    let ingredients: [String]
 
     var shortDescription: String {
-        "Food: \(name) price: \(price) rubles"
+        "Блюдо \(name), цена: \(price) рублей"
     }
-
+    //не уверен что это переменная нужна, скомпоновать красиво на экране проще раздельные переменные
     var fullDescription: String {
-        "Food \(name) have ingredients - \(ingredients.joined(separator: ", ")) and overall calories \(calories) and cost \(price)"
+        "Блюдо \(name), категория \(category), имеет калорийность \(calories) ккал. и стоит \(price) рублей"
     }
 }
 
 extension Food {
     static func getMenu() -> [Food] {
-        let foods: [Food] = []
+
+        var foods: [Food] = []
+
+        let names = FoodBase.shared.names
+        let image = FoodBase.shared.image
+        let price = FoodBase.shared.price
+        let calories = FoodBase.shared.calories
+        let categories = FoodBase.shared.category
+
+        let iterations = min(
+            names.count,
+            image.count,
+            price.count,
+            calories.count,
+            categories.count
+        )
+
+        for index in 0..<iterations {
+            let food = Food(
+                name: names[index],
+                image: image[index],
+                price: price[index],
+                category: categories[index],
+                calories: calories[index]
+            )
+            foods.append(food)
+        }
         return foods
     }
+}
+
+enum FoodCategories: String {
+    case soups = "супы"
+    case mainCourses = "горячее"
+    case deserts = "десерты"
+    case drinks = "напитки"
 }
 
 
