@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		41CEF62627EE733B003F3B95 /* RestaurantData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41CEF62527EE733B003F3B95 /* RestaurantData.swift */; };
 		41CEF62927EE7555003F3B95 /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41CEF62827EE7555003F3B95 /* Restaurant.swift */; };
 		CF44744327EF38FB00F83FD2 /* TeamTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF44744227EF38FB00F83FD2 /* TeamTableViewController.swift */; };
 		CF9AD7DA27EE430700145E3A /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9AD7D927EE430700145E3A /* ContactsViewController.swift */; };
@@ -25,7 +24,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		41CEF62527EE733B003F3B95 /* RestaurantData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantData.swift; sourceTree = "<group>"; };
 		41CEF62827EE7555003F3B95 /* Restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
 		CF44744227EF38FB00F83FD2 /* TeamTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamTableViewController.swift; sourceTree = "<group>"; };
 		CF9AD7D927EE430700145E3A /* ContactsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsViewController.swift; sourceTree = "<group>"; };
@@ -68,7 +66,6 @@
 		D14990A727EE604200DC0A0D /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				41CEF62527EE733B003F3B95 /* RestaurantData.swift */,
 				D14990A827EE606500DC0A0D /* FoodData.swift */,
 			);
 			path = Services;
@@ -232,8 +229,6 @@
 				F71586BA27EE3273007C9639 /* SceneDelegate.swift in Sources */,
 				CF44744327EF38FB00F83FD2 /* TeamTableViewController.swift in Sources */,
 				D14990A927EE606500DC0A0D /* FoodData.swift in Sources */,
-				41CEF62627EE733B003F3B95 /* RestaurantData.swift in Sources */,
-				CF9AD7DC27EE431200145E3A /* TeamViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
