@@ -11,8 +11,6 @@ class TeamTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-
     }
 
     // MARK: - Table view data source
