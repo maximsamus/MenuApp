@@ -18,7 +18,7 @@ class MenuTableViewController: UITableViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        navigationController?.navigationBar.topItem?.title = "YES!"
+        navigationController?.navigationBar.topItem?.title = "MENU"
     }
 
     // MARK: - Table view data source
