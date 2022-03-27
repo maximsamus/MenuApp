@@ -45,5 +45,4 @@ class MenuTableViewController: UITableViewController {
         return cell
 
     }
-    
 }
