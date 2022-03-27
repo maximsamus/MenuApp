@@ -6,7 +6,6 @@
     //
 
 struct Developer {
-    
     let fullname: String
     let position: Position
     let contacts: String
