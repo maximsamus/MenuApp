@@ -21,7 +21,7 @@ class ContactsViewController: UIViewController {
         
         mapImage.image = UIImage(named: "image")
         restaurantLabel.text = restaurant.title
-        addressLabel.text = restaurant.adress
+        addressLabel.text = restaurant.address
         phoneLabel.text = "Tel: \(restaurant.numberPhone)"
     }
 }

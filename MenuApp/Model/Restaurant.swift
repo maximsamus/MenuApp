@@ -8,7 +8,7 @@
 struct Restaurant {
     
     let title: String
-    let adress: String
+    let address: String
     let numberPhone: String
     let image: String
 }
@@ -19,7 +19,7 @@ extension Restaurant {
 
         Restaurant(
             title: "Tokyo",
-            adress: "Trubnaya St., 21, Moscow 127051 Russia",
+            address: "Trubnaya St., 21, Moscow 127051 Russia",
             numberPhone: "+7(495)111-22-33", 
             image: "image"
         )

@@ -229,7 +229,6 @@
 				F71586BA27EE3273007C9639 /* SceneDelegate.swift in Sources */,
 				CF44744327EF38FB00F83FD2 /* TeamTableViewController.swift in Sources */,
 				D14990A927EE606500DC0A0D /* FoodData.swift in Sources */,
-				CF9AD7DC27EE431200145E3A /* TeamViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
