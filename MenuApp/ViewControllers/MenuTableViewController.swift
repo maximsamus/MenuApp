@@ -16,6 +16,11 @@ class MenuTableViewController: UITableViewController {
         tableView.rowHeight = 80
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.navigationBar.topItem?.title = "YES!"
+    }
+
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
