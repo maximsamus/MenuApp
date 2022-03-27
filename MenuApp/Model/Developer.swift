@@ -31,11 +31,6 @@ extension Developer {
                 contacts: "@lex95us"
             ),
             Developer(
-                fullname: "Alexandr Barabash",
-                position: .developer,
-                contacts: "@AlexandrBarabash"
-            ),
-            Developer(
                 fullname: "Konstantin Fomenkov",
                 position: .developer,
                 contacts: "@CreoPride"

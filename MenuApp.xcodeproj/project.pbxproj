@@ -132,9 +132,9 @@
 		F71586CE27EE37DE007C9639 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				F71586B727EE3273007C9639 /* AppDelegate.swift */,
 				F71586B927EE3273007C9639 /* SceneDelegate.swift */,
 				F71586C527EE3275007C9639 /* Info.plist */,
-				F71586B727EE3273007C9639 /* AppDelegate.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
