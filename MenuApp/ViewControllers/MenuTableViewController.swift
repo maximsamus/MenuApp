@@ -30,7 +30,6 @@ class MenuTableViewController: UITableViewController {
         return menu[section].food.count
     }
 
-    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "menu", for: indexPath)
         
@@ -47,5 +46,4 @@ class MenuTableViewController: UITableViewController {
 
     }
     
-
 }
