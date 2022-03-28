@@ -47,14 +47,12 @@ struct Food {
     let image: String
     let price: Int
     let calories: Int
+    let weight: Int
+    let description: String
     let category: CategoryType
 
     var shortDescription: String {
-        "Блюдо \(name), цена: \(price) рублей"
-    }
-        //не уверен что это переменная нужна, скомпоновать красиво на экране проще раздельные переменные
-    var fullDescription: String {
-        "Блюдо \(name) имеет калорийность \(calories) ккал. и стоит \(price) рублей"
+        "Блюдо весит \(weight) грамм и стоит \(price) рублей"
     }
 }
 
@@ -74,6 +72,8 @@ extension Food {
         let images = FoodData.shared.images
         let prices = FoodData.shared.prices
         let calories = FoodData.shared.calories
+        let weights = FoodData.shared.weights
+        let descriptions = FoodData.shared.descriptions
         let categories = FoodData.shared.categories
 
         let iterations = min(
@@ -81,7 +81,9 @@ extension Food {
             images.count,
             prices.count,
             calories.count,
-            categories.count
+            weights.count,
+            categories.count,
+            descriptions.count
         )
 
         for index in 0..<iterations {
@@ -90,6 +92,8 @@ extension Food {
                 image: images[index],
                 price: prices[index],
                 calories: calories[index],
+                weight: weights[index],
+                description: descriptions[index],
                 category: categories[index]
             )
             foods.append(food)
