@@ -27,6 +27,6 @@ class ContactsViewController: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        navigationController?.navigationBar.topItem?.title = "NO!"
+        navigationController?.navigationBar.topItem?.title = "Контакты"
     }
 }
