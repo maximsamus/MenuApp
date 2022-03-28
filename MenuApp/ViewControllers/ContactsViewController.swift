@@ -18,10 +18,15 @@ class ContactsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         mapImage.image = UIImage(named: "image")
         restaurantLabel.text = restaurant.title
         addressLabel.text = restaurant.address
         phoneLabel.text = "Tel: \(restaurant.numberPhone)"
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.navigationBar.topItem?.title = "Контакты"
     }
 }

@@ -12,57 +12,32 @@ struct Menu {
     let food: [Food]
     
     static func getMenu() -> [Menu] {
-        let data = FoodData.shared
-        return [
-            Menu(category: .soups, food: [
-                Food(name: data.names[0],
-                     image: data.image[0],
-                     price: data.price[0],
-                     calories: data.calories[0]),
-                Food(name: data.names[1],
-                     image: data.image[1],
-                     price: data.price[1],
-                     calories: data.calories[1]),
-                Food(name: data.names[2],
-                     image: data.image[2],
-                     price: data.price[2],
-                     calories: data.calories[2])
-            ]),
-            Menu(category: .main, food: [
-                Food(name: data.names[3],
-                     image: data.image[3],
-                     price: data.price[3],
-                     calories: data.calories[3]),
-                Food(name: data.names[4],
-                     image: data.image[4],
-                     price: data.price[4],
-                     calories: data.calories[4]),
-                Food(name: data.names[5],
-                     image: data.image[5],
-                     price: data.price[5],
-                     calories: data.calories[5])
-            ]),
-            Menu(category: .desserts, food: [
-                Food(name: data.names[6],
-                     image: data.image[6],
-                     price: data.price[6],
-                     calories: data.calories[6]),
-                Food(name: data.names[7],
-                     image: data.image[7],
-                     price: data.price[7],
-                     calories: data.calories[7])
-            ]),
-            Menu(category: .drinks, food: [
-                Food(name: data.names[8],
-                     image: data.image[8],
-                     price: data.price[8],
-                     calories: data.calories[8]),
-                Food(name: data.names[9],
-                     image: data.image[9],
-                     price: data.price[9],
-                     calories: data.calories[9])
-            ])
-        ]
+        let foodData = Food.getMenu()
+
+        var menu: [Menu] = []
+        var soups: [Food] = []
+        var mains: [Food] = []
+        var desserts: [Food] = []
+        var drinks: [Food] = []
+
+        for food in foodData {
+            switch food.category {
+            case .soups:
+                soups.append(food)
+            case .mains:
+                mains.append(food)
+            case .desserts:
+                desserts.append(food)
+            case .drinks:
+                drinks.append(food)
+            }
+        }
+        menu.append(Menu(category: .soups, food: soups))
+        menu.append(Menu(category: .mains, food: mains))
+        menu.append(Menu(category: .desserts, food: desserts))
+        menu.append(Menu(category: .drinks, food: drinks))
+
+        return menu
     }
 }
 
@@ -72,55 +47,60 @@ struct Food {
     let image: String
     let price: Int
     let calories: Int
+    let weight: Int
+    let description: String
+    let category: CategoryType
 
     var shortDescription: String {
-        "Блюдо \(name), цена: \(price) рублей"
-    }
-        //не уверен что это переменная нужна, скомпоновать красиво на экране проще раздельные переменные
-    var fullDescription: String {
-        "Блюдо \(name) имеет калорийность \(calories) ккал. и стоит \(price) рублей"
+        "Блюдо весит \(weight) грамм и стоит \(price) рублей"
     }
 }
 
 enum CategoryType: String {
     case soups = "Супы"
-    case main = "Горячее"
+    case mains = "Горячее"
     case desserts = "Десерты"
     case drinks = "Напитки"
 }
 
-//extension Food {
-//    static func getMenu() -> [Food] {
-//
-//        var foods: [Food] = []
-//
-//        let names = FoodData.shared.names
-//        let image = FoodData.shared.image
-//        let price = FoodData.shared.price
-//        let calories = FoodData.shared.calories
-////        let categories = FoodData.shared.category
-//
-//        let iterations = min(
-//            names.count,
-//            image.count,
-//            price.count,
-//            calories.count
-////            categories.count
-//        )
-//
-//        for index in 0..<iterations {
-//            let food = Food(
-//                name: names[index],
-//                image: image[index],
-//                price: price[index],
-////                category: categories[index],
-//                calories: calories[index]
-//            )
-//            foods.append(food)
-//        }
-//        return foods
-//    }
-//}
+extension Food {
+    static func getMenu() -> [Food] {
+
+        var foods: [Food] = []
+
+        let names = FoodData.shared.names
+        let images = FoodData.shared.images
+        let prices = FoodData.shared.prices
+        let calories = FoodData.shared.calories
+        let weights = FoodData.shared.weights
+        let descriptions = FoodData.shared.descriptions
+        let categories = FoodData.shared.categories
+
+        let iterations = min(
+            names.count,
+            images.count,
+            prices.count,
+            calories.count,
+            weights.count,
+            categories.count,
+            descriptions.count
+        )
+
+        for index in 0..<iterations {
+            let food = Food(
+                name: names[index],
+                image: images[index],
+                price: prices[index],
+                calories: calories[index],
+                weight: weights[index],
+                description: descriptions[index],
+                category: categories[index]
+            )
+            foods.append(food)
+        }
+        return foods
+    }
+}
 
 
 

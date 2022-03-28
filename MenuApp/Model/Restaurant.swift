@@ -2,11 +2,10 @@
     //  Restaurant.swift
     //  MenuApp
     //
-    //  Created by Alexandr Barabash on 26.03.2022.
+    //  Created by Konstantin Fomenkov on 26.03.2022.
     //
 
 struct Restaurant {
-    
     let title: String
     let address: String
     let numberPhone: String
@@ -16,7 +15,6 @@ struct Restaurant {
 extension Restaurant {
     
     static func getContact() -> Restaurant {
-
         Restaurant(
             title: "Tokyo",
             address: "Trubnaya St., 21, Moscow 127051 Russia",
