@@ -18,7 +18,13 @@ class MenuTableViewController: UITableViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        navigationController?.navigationBar.topItem?.title = "MENU"
+        navigationController?.navigationBar.topItem?.title = "Меню"
+    }
+    
+    // MARK: - Navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let detailVC = segue.destination as? DetailViewController else { return }
+        detailVC.food = sender as? Food
     }
 
     // MARK: - Table view data source
@@ -49,5 +55,13 @@ class MenuTableViewController: UITableViewController {
         cell.contentConfiguration = content
         return cell
 
+    }
+}
+
+// MARK: - UITableViewDelegate
+extension MenuTableViewController {
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let food = menu[indexPath.section].food[indexPath.row]
+        performSegue(withIdentifier: "toDetailVC", sender: food)
     }
 }
