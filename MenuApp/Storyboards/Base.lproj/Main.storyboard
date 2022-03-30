@@ -329,6 +329,14 @@
                                     </label>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rh8-o4-fM6">
+                                <rect key="frame" x="116.5" y="410.5" width="87" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Team Info"/>
+                                <connections>
+                                    <segue destination="jwC-D3-RLM" kind="show" id="qXw-uJ-1Ze"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="euS-kw-xno"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -337,6 +345,8 @@
                             <constraint firstItem="6KG-vQ-Fy7" firstAttribute="top" secondItem="euS-kw-xno" secondAttribute="top" constant="16" id="6Wh-LD-7tL"/>
                             <constraint firstItem="jeK-D1-csa" firstAttribute="height" secondItem="dNQ-Wx-v6x" secondAttribute="height" multiplier="0.310295" id="TNK-5I-CwI"/>
                             <constraint firstItem="euS-kw-xno" firstAttribute="trailing" secondItem="6KG-vQ-Fy7" secondAttribute="trailing" constant="16" id="fcJ-3B-W6i"/>
+                            <constraint firstItem="rh8-o4-fM6" firstAttribute="top" secondItem="6KG-vQ-Fy7" secondAttribute="bottom" constant="30" id="kDU-tu-Jec"/>
+                            <constraint firstItem="rh8-o4-fM6" firstAttribute="centerX" secondItem="dNQ-Wx-v6x" secondAttribute="centerX" id="oWl-HI-kks"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Info" image="globe.europe.africa.fill" catalog="system" id="rbY-hV-lSJ"/>
@@ -345,7 +355,6 @@
                         <outlet property="mapImage" destination="jeK-D1-csa" id="1Bu-lR-G1C"/>
                         <outlet property="phoneLabel" destination="Gt9-cy-fYO" id="jZb-FW-Fbb"/>
                         <outlet property="restaurantLabel" destination="zGH-9q-dlO" id="0fL-fa-3qb"/>
-                        <segue destination="jwC-D3-RLM" kind="show" id="L2o-FI-QCp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gKv-cf-nBI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
