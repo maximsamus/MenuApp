@@ -5,8 +5,6 @@
     //  Created by Konstantin Fomenkov on 25.03.2022.
     //
 
-import Foundation
-
 struct Menu {
     let category: CategoryType
     let food: [Food]
