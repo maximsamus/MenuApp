@@ -26,7 +26,8 @@ class DetailViewController: UIViewController {
         caloriesLabel.text = "\(food.calories)ккал"
         priceLabel.text = "\(food.price)руб"
         fullDescriptionLabel.text = food.description
-        
+        navigationItem.title = "\(food.name)"
     }
+    
 }
 

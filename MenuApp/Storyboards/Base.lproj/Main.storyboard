@@ -102,7 +102,7 @@
                             <constraint firstItem="iof-Xy-iSq" firstAttribute="trailing" secondItem="594-3h-Fje" secondAttribute="trailing" constant="16" id="roh-h2-PIX"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="UYs-ZW-k74"/>
+                    <navigationItem key="navigationItem" title="блюдо" id="UYs-ZW-k74"/>
                     <connections>
                         <outlet property="bigImageView" destination="lgs-Ir-l9Y" id="DYK-yf-1BE"/>
                         <outlet property="caloriesLabel" destination="533-QX-aht" id="FGI-W8-FjU"/>
