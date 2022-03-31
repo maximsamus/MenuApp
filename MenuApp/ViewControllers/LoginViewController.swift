@@ -30,6 +30,7 @@ class LoginViewController: UIViewController {
         
         UserData.shared.users.forEach { user in
             if usernameTF.text == user.email && passwordTF.text == user.password {
+                print(UserData.shared.users)
                 performSegue(withIdentifier: "toBookingVC", sender: nil)
             } else {
                 showAlert(title: "Invalid login or password",
@@ -41,8 +42,8 @@ class LoginViewController: UIViewController {
 }
 
 // MARK: - Alert Controller
-extension LoginViewController {
-    private func showAlert(title: String, message: String, textField: UITextField? = nil) {
+extension UIViewController {
+    func showAlert(title: String, message: String, textField: UITextField? = nil) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let okAction = UIAlertAction(title: "OK", style: .default) { _ in
             textField?.text = ""

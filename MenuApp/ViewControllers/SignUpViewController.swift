@@ -8,36 +8,30 @@
 import UIKit
 
 class SignUpViewController: UIViewController {
-
+    
     @IBOutlet var firstNameTF: UITextField!
     @IBOutlet var lastNameTF: UITextField!
     @IBOutlet var emailTF: UITextField!
     @IBOutlet var passwordTF: UITextField!
-        
-    @IBAction func savePressed() {
+    
+    @IBAction func saveButtonPressed() {
         guard emailTF.text != "", passwordTF.text != "" else {
             showAlert(title: "Error", message: "Please enter email and password!")
             return
         }
         
-        UserData.shared.add(user: User(firstName: firstNameTF.text,
-                                lastName: lastNameTF.text,
-                                email: emailTF.text!,
-                                password: passwordTF.text!))
-        dismiss(animated: true)
-    }
-}
-
-
-// MARK: - Alert Controller
-extension SignUpViewController {
-    private func showAlert(title: String, message: String, textField: UITextField? = nil) {
-        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "OK", style: .default) { _ in
-            textField?.text = ""
+        for user in UserData.shared.users {
+            guard user.email != emailTF.text else {
+                showAlert(title: "Error", message: "This email is already used!")
+                return
+            }
         }
-        alert.addAction(okAction)
-        present(alert, animated: true)
+        
+        UserData.shared.add(user: User(firstName: firstNameTF.text,
+                                       lastName: lastNameTF.text,
+                                       email: emailTF.text!,
+                                       password: passwordTF.text!))
+        dismiss(animated: true)
     }
 }
 
@@ -58,7 +52,7 @@ extension SignUpViewController: UITextFieldDelegate {
         case emailTF:
             passwordTF.becomeFirstResponder()
         default:
-            savePressed()
+            saveButtonPressed()
         }
         return true
     }
