@@ -13,17 +13,17 @@ class TeamTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.rowHeight = 100
+        tableView.rowHeight = 70
     }
     
     // MARK: - Table view data source
     
-    //    override func numberOfSections(in tableView: UITableView) -> Int {
-    //        return team.count
-    //    }
+        override func numberOfSections(in tableView: UITableView) -> Int {
+            return team.count
+        }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return team.count
+        return 1
     }
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
@@ -32,7 +32,7 @@ class TeamTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "team", for: indexPath)
-        let developer = team[indexPath.row]
+        let developer = team[indexPath.section]
         var content = cell.defaultContentConfiguration()
         content.text = developer.fullname
         content.secondaryText = developer.contacts
