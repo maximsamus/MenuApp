@@ -33,7 +33,8 @@ class DetailViewController: UIViewController {
         
         priceLabel.text = "\(food.price)руб"
         fullDescriptionLabel.text = food.description
-        
+        navigationItem.title = "\(food.name)"
     }
+    
 }
 
