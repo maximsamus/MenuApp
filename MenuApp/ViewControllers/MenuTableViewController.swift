@@ -54,7 +54,6 @@ class MenuTableViewController: UITableViewController {
         content.imageProperties.cornerRadius = tableView.rowHeight / 2
         cell.contentConfiguration = content
         return cell
-
     }
 }
 

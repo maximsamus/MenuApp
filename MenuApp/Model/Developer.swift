@@ -39,6 +39,6 @@ extension Developer {
 }
 
 enum Position: String {
-    case teamLead = "Team Leader"
+    case teamLead = "Team Lead"
     case developer = "Developer"
 }
