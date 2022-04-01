@@ -8,12 +8,12 @@
 import UIKit
 
 class BookingViewController: UIViewController {
+    
     @IBOutlet var guestsTF: UITextField!
     @IBOutlet var phoneNumberTF: UITextField!
     
-    var date: String!
     var user: User!
-    var bookings: [Booking] = []
+    private var date: String!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,17 +32,20 @@ class BookingViewController: UIViewController {
         guard phoneNumberTF.text != "", guestsTF.text != "" else {
             showAlert(title: "Не все поля заполнены!",
                       message: "Пожалуйста укажите номер телефона и количество гостей!")
-            return }
+            return
+        }
+        
         guard date != nil else {
             showAlert(title: "Не выбрана дата!",
                       message: "Пожалуйста выберите дату!")
-            return }
+            return
+        }
+        
         let booking = Booking(user: user,
                               phoneNumber: phoneNumberTF.text!,
                               guestsNumber: guestsTF.text!,
                               date: date)
-        bookings.append(booking)
-        print(bookings)
+        BookingData.shared.bookings.append(booking)
     }
 }
 

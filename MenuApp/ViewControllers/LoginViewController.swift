@@ -15,7 +15,7 @@ class LoginViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        navigationController?.navigationBar.topItem?.title = "Логин"
+        navigationController?.navigationBar.topItem?.title = "Профиль"
     }
     
     override func viewDidLoad() {
@@ -53,17 +53,7 @@ class LoginViewController: UIViewController {
     }
 }
 
-// MARK: - Alert Controller
-extension UIViewController {
-    func showAlert(title: String, message: String, textField: UITextField? = nil) {
-        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "OK", style: .default) { _ in
-            textField?.text = ""
-        }
-        alert.addAction(okAction)
-        present(alert, animated: true)
-    }
-}
+
 
 // MARK: - UITextFieldDelegate
 extension LoginViewController: UITextFieldDelegate {
