@@ -11,6 +11,8 @@ class LoginViewController: UIViewController {
     @IBOutlet var usernameTF: UITextField!
     @IBOutlet var passwordTF: UITextField!
     
+    var user: User!
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.navigationBar.topItem?.title = "Логин"
@@ -18,6 +20,16 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let bookingVC = segue.destination as? BookingViewController else { return}
+        bookingVC.user = user
+    }
+    
+    @IBAction func unwind(for segue: UIStoryboardSegue) {
+        usernameTF.text = ""
+        passwordTF.text = ""
     }
     
     @IBAction func signInPressed() {
@@ -30,7 +42,7 @@ class LoginViewController: UIViewController {
         
         UserData.shared.users.forEach { user in
             if usernameTF.text == user.email && passwordTF.text == user.password {
-                print(UserData.shared.users)
+                self.user = user
                 performSegue(withIdentifier: "toBookingVC", sender: nil)
             } else {
                 showAlert(title: "Invalid login or password",
