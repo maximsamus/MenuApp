@@ -10,6 +10,7 @@
 		41CEF62927EE7555003F3B95 /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41CEF62827EE7555003F3B95 /* Restaurant.swift */; };
 		CF44744327EF38FB00F83FD2 /* TeamTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF44744227EF38FB00F83FD2 /* TeamTableViewController.swift */; };
 		CF78310A27F49A050051BD47 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF78310927F49A050051BD47 /* User.swift */; };
+		CF88FB7727F70033007A9BE4 /* Booking.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF88FB7627F70033007A9BE4 /* Booking.swift */; };
 		CF8E5B3C27F491B50069F6FF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8E5B3B27F491B50069F6FF /* LoginViewController.swift */; };
 		CF8E5B3E27F491C50069F6FF /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8E5B3D27F491C50069F6FF /* SignUpViewController.swift */; };
 		CF8E5B4027F4921A0069F6FF /* BookingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8E5B3F27F4921A0069F6FF /* BookingViewController.swift */; };
@@ -32,6 +33,7 @@
 		41CEF62827EE7555003F3B95 /* Restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
 		CF44744227EF38FB00F83FD2 /* TeamTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamTableViewController.swift; sourceTree = "<group>"; };
 		CF78310927F49A050051BD47 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		CF88FB7627F70033007A9BE4 /* Booking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Booking.swift; sourceTree = "<group>"; };
 		CF8E5B3B27F491B50069F6FF /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		CF8E5B3D27F491C50069F6FF /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		CF8E5B3F27F4921A0069F6FF /* BookingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingViewController.swift; sourceTree = "<group>"; };
@@ -70,6 +72,7 @@
 				CF78310927F49A050051BD47 /* User.swift */,
 				D19D5B9227EF35F300AD4F92 /* Developer.swift */,
 				41CEF62827EE7555003F3B95 /* Restaurant.swift */,
+				CF88FB7627F70033007A9BE4 /* Booking.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -234,6 +237,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CF8E5B3C27F491B50069F6FF /* LoginViewController.swift in Sources */,
+				CF88FB7727F70033007A9BE4 /* Booking.swift in Sources */,
 				41CEF62927EE7555003F3B95 /* Restaurant.swift in Sources */,
 				F71586BC27EE3273007C9639 /* DetailViewController.swift in Sources */,
 				CF8E5B4227F494B70069F6FF /* UserData.swift in Sources */,

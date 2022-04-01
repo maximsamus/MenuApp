@@ -8,22 +8,42 @@
 import UIKit
 
 class BookingViewController: UIViewController {
+    @IBOutlet var guestsTF: UITextField!
+    @IBOutlet var phoneNumberTF: UITextField!
+    
+    var date: String!
+    var user: User!
+    var bookings: [Booking] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        navigationItem.hidesBackButton = true
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func datePickerAction(_ sender: UIDatePicker) {
+        let formatter = DateFormatter()
+        formatter.dateStyle = .medium
+        formatter.timeStyle = .short
+        date = formatter.string(from: sender.date)
     }
-    */
-
+    
+    @IBAction func bookButtonPressed() {
+        guard phoneNumberTF.text != "", guestsTF.text != "" else {
+            showAlert(title: "Не все поля заполнены!",
+                      message: "Пожалуйста укажите номер телефона и количество гостей!")
+            return }
+        guard date != nil else {
+            showAlert(title: "Не выбрана дата!",
+                      message: "Пожалуйста выберите дату!")
+            return }
+        let booking = Booking(user: user,
+                              phoneNumber: phoneNumberTF.text!,
+                              guestsNumber: guestsTF.text!,
+                              date: date)
+        bookings.append(booking)
+        print(bookings)
+    }
 }
+
+
