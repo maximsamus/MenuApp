@@ -30,6 +30,7 @@ struct Menu {
                 drinks.append(food)
             }
         }
+        
         menu.append(Menu(category: .soups, food: soups))
         menu.append(Menu(category: .mains, food: mains))
         menu.append(Menu(category: .desserts, food: desserts))

@@ -13,7 +13,7 @@ class TeamTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.rowHeight = 70
+        tableView.rowHeight = 50
     }
     
     // MARK: - Table view data source
@@ -32,7 +32,9 @@ class TeamTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "team", for: indexPath)
+        
         let developer = team[indexPath.section]
+        
         var content = cell.defaultContentConfiguration()
         content.text = developer.fullname
         content.secondaryText = developer.contacts
