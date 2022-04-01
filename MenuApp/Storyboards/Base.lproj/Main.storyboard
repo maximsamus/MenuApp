@@ -119,7 +119,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="lfp-LQ-H91">
             <objects>
-                <tabBarController id="DGT-r3-GQy" customClass="TabBarController" customModule="MenuApp" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController id="DGT-r3-GQy" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="EDK-XO-Gye"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="BhX-7f-6Vf">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
@@ -196,7 +196,7 @@
                             <constraint firstItem="9fr-6E-djO" firstAttribute="trailing" secondItem="dyd-8P-qwm" secondAttribute="trailing" constant="16" id="hgB-6B-OSH"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Логин" image="person.fill" catalog="system" id="rWk-PO-D4a"/>
+                    <tabBarItem key="tabBarItem" title="Профиль" image="person.fill" catalog="system" id="rWk-PO-D4a"/>
                     <connections>
                         <outlet property="passwordTF" destination="zmS-uq-0Pn" id="eMf-Ok-nOk"/>
                         <outlet property="usernameTF" destination="3ma-8Q-6KV" id="iCx-sL-Zh1"/>
@@ -365,6 +365,7 @@
                                         <buttonConfiguration key="configuration" style="plain" title="Забронировать"/>
                                         <connections>
                                             <action selector="bookButtonPressed" destination="4s5-j1-dtq" eventType="touchUpInside" id="kOv-3J-bs8"/>
+                                            <segue destination="OJe-PG-dVI" kind="unwind" unwindAction="unwindFor:" id="cTo-FV-BWb"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -433,14 +434,6 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rh8-o4-fM6">
-                                <rect key="frame" x="116.5" y="430.5" width="87" height="31"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Team Info"/>
-                                <connections>
-                                    <segue destination="jwC-D3-RLM" kind="show" id="qXw-uJ-1Ze"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="euS-kw-xno"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -449,8 +442,6 @@
                             <constraint firstItem="6KG-vQ-Fy7" firstAttribute="top" secondItem="euS-kw-xno" secondAttribute="top" constant="16" id="6Wh-LD-7tL"/>
                             <constraint firstItem="jeK-D1-csa" firstAttribute="height" secondItem="dNQ-Wx-v6x" secondAttribute="height" multiplier="0.310295" id="TNK-5I-CwI"/>
                             <constraint firstItem="euS-kw-xno" firstAttribute="trailing" secondItem="6KG-vQ-Fy7" secondAttribute="trailing" constant="16" id="fcJ-3B-W6i"/>
-                            <constraint firstItem="rh8-o4-fM6" firstAttribute="top" secondItem="6KG-vQ-Fy7" secondAttribute="bottom" constant="50" id="kDU-tu-Jec"/>
-                            <constraint firstItem="rh8-o4-fM6" firstAttribute="centerX" secondItem="dNQ-Wx-v6x" secondAttribute="centerX" id="oWl-HI-kks"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Контакты" image="globe.europe.africa.fill" catalog="system" id="rbY-hV-lSJ"/>
@@ -459,13 +450,14 @@
                         <outlet property="mapImage" destination="jeK-D1-csa" id="1Bu-lR-G1C"/>
                         <outlet property="phoneLabel" destination="Gt9-cy-fYO" id="jZb-FW-Fbb"/>
                         <outlet property="restaurantLabel" destination="zGH-9q-dlO" id="0fL-fa-3qb"/>
+                        <segue destination="jwC-D3-RLM" kind="show" identifier="toTeamVC" id="Pve-tI-Nks"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gKv-cf-nBI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2483" y="848"/>
         </scene>
-        <!--Developers team:-->
+        <!--Developer Team:-->
         <scene sceneID="9mM-fo-cJg">
             <objects>
                 <tableViewController id="jwC-D3-RLM" customClass="TeamTableViewController" customModule="MenuApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -504,7 +496,7 @@
                             <outlet property="delegate" destination="jwC-D3-RLM" id="Fsz-St-eeg"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Developers team:" largeTitleDisplayMode="always" id="Z6f-4W-gRr"/>
+                    <navigationItem key="navigationItem" title="Developer Team:" largeTitleDisplayMode="always" id="Z6f-4W-gRr"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="miG-Lw-DCm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

@@ -16,17 +16,28 @@ class ContactsViewController: UIViewController {
     
     private let restaurant = Restaurant.getContact()
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.navigationBar.topItem?.title = "Контакты"
+        navigationController?.navigationBar.topItem?.rightBarButtonItem = UIBarButtonItem(title: "О Нас",
+                                                                 style: .plain,
+                                                                 target: self,
+                                                                 action: #selector(teamInfoTapped))
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
         mapImage.image = UIImage(named: "image")
         restaurantLabel.text = restaurant.title
         addressLabel.text = restaurant.address
         phoneLabel.text = "Tel: \(restaurant.numberPhone)"
     }
-
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        navigationController?.navigationBar.topItem?.title = "Контакты"
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        navigationController?.navigationBar.topItem?.rightBarButtonItem = nil
+    }
+    
+    @IBAction func teamInfoTapped() {
+        performSegue(withIdentifier: "toTeamVC", sender: nil)
     }
 }

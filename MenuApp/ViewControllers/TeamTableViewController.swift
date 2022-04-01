@@ -13,14 +13,14 @@ class TeamTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.rowHeight = 70
+        tableView.rowHeight = 50
     }
     
     // MARK: - Table view data source
     
-        override func numberOfSections(in tableView: UITableView) -> Int {
-            return team.count
-        }
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        return team.count
+    }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
