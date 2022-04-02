@@ -29,6 +29,7 @@ class BookingViewController: UIViewController {
     }
     
     @IBAction func bookButtonPressed() {
+        print(user.firstName ?? "no name")
         guard phoneNumberTF.text != "", guestsTF.text != "" else {
             showAlert(title: "Не все поля заполнены!",
                       message: "Пожалуйста укажите номер телефона и количество гостей!")
@@ -40,12 +41,14 @@ class BookingViewController: UIViewController {
                       message: "Пожалуйста выберите дату!")
             return
         }
-        
+        showAlert(title: "\(user.firstName ?? "no name")", message: "fgdgdg")
         let booking = Booking(user: user,
                               phoneNumber: phoneNumberTF.text!,
                               guestsNumber: guestsTF.text!,
                               date: date)
         BookingData.shared.bookings.append(booking)
+
+
     }
 }
 

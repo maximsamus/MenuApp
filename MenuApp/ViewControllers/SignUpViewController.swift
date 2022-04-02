@@ -1,9 +1,9 @@
-//
-//  SignUpViewController.swift
-//  MenuApp
-//
-//  Created by Paul Matar on 30.03.2022.
-//
+    //
+    //  SignUpViewController.swift
+    //  MenuApp
+    //
+    //  Created by Paul Matar on 30.03.2022.
+    //
 
 import UIKit
 
@@ -15,11 +15,12 @@ class SignUpViewController: UIViewController {
     @IBOutlet var passwordTF: UITextField!
     
     @IBAction func saveButtonPressed() {
-        guard let email = emailTF.text, let password = passwordTF.text else {
+        guard emailTF.text != "", passwordTF.text != "" else {
             showAlert(title: "Не все поля заполнены!",
                       message: "Пожалуйста укажите email и пароль!")
             return
         }
+        guard let email = emailTF.text, let password = passwordTF.text else { return }
         let newUser = User(firstName: firstNameTF.text ?? "", lastName: lastNameTF.text ?? "", email: email, password: password)
 
         if !newUser.checkUser(newUser) {
@@ -31,7 +32,7 @@ class SignUpViewController: UIViewController {
     }
 }
 
-// MARK: - UITextFieldDelegate
+    // MARK: - UITextFieldDelegate
 extension SignUpViewController: UITextFieldDelegate {
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
