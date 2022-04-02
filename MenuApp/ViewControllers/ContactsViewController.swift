@@ -33,7 +33,7 @@ class ContactsViewController: UIViewController {
         phoneLabel.text = "Tel: \(restaurant.numberPhone)"
     }
     
-    override func viewWillDisappear(_ animated: Bool) {
+    override func viewDidDisappear(_ animated: Bool) {
         navigationController?.navigationBar.topItem?.rightBarButtonItem = nil
     }
     
