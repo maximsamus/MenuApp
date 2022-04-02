@@ -18,6 +18,10 @@ class LoginViewController: UIViewController {
         navigationController?.navigationBar.topItem?.title = "Профиль"
     }
     
+    override func viewDidLoad() {
+        setupBackgroundImage()
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let bookingVC = segue.destination as? BookingViewController else { return}
         bookingVC.user = user

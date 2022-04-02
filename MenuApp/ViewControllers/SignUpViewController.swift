@@ -14,6 +14,10 @@ class SignUpViewController: UIViewController {
     @IBOutlet var emailTF: UITextField!
     @IBOutlet var passwordTF: UITextField!
     
+    override func viewDidLoad() {
+        setupBackgroundImage()
+    }
+    
     @IBAction func saveButtonPressed() {
         
         guard !emailTF.isEmpty, !passwordTF.isEmpty else {

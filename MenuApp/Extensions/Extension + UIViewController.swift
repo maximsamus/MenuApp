@@ -7,7 +7,6 @@
 
 import UIKit
 
-// MARK: - Alert Controller
 extension UIViewController {
     func showAlert(title: String, message: String, textField: UITextField? = nil) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
@@ -18,10 +17,12 @@ extension UIViewController {
         alert.addAction(okAction)
         present(alert, animated: true, completion: nil)
     }
-}
-
-extension UITextField {
-    var isEmpty: Bool {
-        text == "" || text == nil
+    
+    func setupBackgroundImage() {
+        let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
+        backgroundImage.alpha = 0.2
+        backgroundImage.image = UIImage(named: "view")
+        backgroundImage.contentMode = .scaleAspectFill
+        view.insertSubview(backgroundImage, at: 0)
     }
 }

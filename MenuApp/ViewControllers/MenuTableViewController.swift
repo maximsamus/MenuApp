@@ -13,12 +13,10 @@ class MenuTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationController?.view.backgroundColor = .clear
-        navigationController?.navigationBar.isTranslucent = true
+//        navigationController?.view.backgroundColor = .clear ?
+//        navigationController?.navigationBar.isTranslucent = true ?
         tableView.rowHeight = 80
-        tableView.backgroundView = UIImageView(image: UIImage(named: "view"))
-        tableView.backgroundView?.isOpaque = false
-        tableView.backgroundView?.alpha = 0.2
+        setupBGImageForTablewView()
     }
 
     override func viewWillAppear(_ animated: Bool) {
