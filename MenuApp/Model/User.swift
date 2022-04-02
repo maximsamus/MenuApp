@@ -1,9 +1,9 @@
-//
-//  User.swift
-//  MenuApp
-//
-//  Created by Paul Matar on 30.03.2022.
-//
+    //
+    //  User.swift
+    //  MenuApp
+    //
+    //  Created by Paul Matar on 30.03.2022.
+    //
 
 struct User {
     let firstName: String?
@@ -17,6 +17,15 @@ struct User {
 
     func checkPassword(of user: User) -> Bool {
         UserData.shared.users.contains(where: { $0.email == user.email && $0.password == user.password })
+    }
+
+    func getUser(_ user: User) -> User {
+        var returnUser: User!
+        UserData.shared.users.forEach({ testUser in
+            if testUser.email == user.email && testUser.password == user.password {
+                returnUser = testUser }
+        })
+        return returnUser
     }
 
     func addUser(_ user: User) {
