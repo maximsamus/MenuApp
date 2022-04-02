@@ -16,7 +16,7 @@ extension Restaurant {
     
     static func getContact() -> Restaurant {
         Restaurant(
-            title: "Pizzeria",
+            title: "Pizzeria 'Маленькая Сицилия'",
             address: "ул.Трубная, 21, Москва 127051",
             numberPhone: "+7(495)111-22-33", 
             map: "image"
