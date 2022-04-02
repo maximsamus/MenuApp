@@ -33,22 +33,15 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func signInPressed() {
-        guard !UserData.shared.users.isEmpty else {
-            showAlert(title: "Error",
-                      message: "No users found",
+        guard let email = usernameTF.text, let password = passwordTF.text else { return }
+        let tempUser = User(firstName: "", lastName: "", email: email, password: password)
+        if tempUser.checkUser(tempUser), tempUser.checkPassword(of: tempUser) {
+            self.user = tempUser
+            performSegue(withIdentifier: "toBookingVC", sender: nil)
+        } else {
+            showAlert(title: "Invalid login or password",
+                      message: "Please, enter correct login and password",
                       textField: passwordTF)
-            return
-        }
-        
-        UserData.shared.users.forEach { user in
-            if usernameTF.text == user.email && passwordTF.text == user.password {
-                self.user = user
-                performSegue(withIdentifier: "toBookingVC", sender: nil)
-            } else {
-                showAlert(title: "Invalid login or password",
-                          message: "Please, enter correct login and password",
-                          textField: passwordTF)
-            }
         }
     }
 }
