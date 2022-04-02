@@ -38,7 +38,7 @@ class BookingViewController: UIViewController {
                               phoneNumber: phoneNumberTF.text ?? "",
                               guestsNumber: guestsTF.text ?? "",
                                  date: date)
-        booking.addBook(booking)
+        booking.add(booking: booking)
         showAlert(
             title: "\(booking.user.firstName ?? "")",
             message: "Столик на \(booking.guestsNumber)чел. забронирован на \(booking.date)"

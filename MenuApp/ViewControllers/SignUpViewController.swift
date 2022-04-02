@@ -29,7 +29,7 @@ class SignUpViewController: UIViewController {
                            password: password)
 
         if !newUser.checkUser(newUser) {
-            newUser.addUser(newUser)
+            newUser.add(user: newUser)
         } else {
             showAlert(title: "Ошибка!", message: "Данный email уже используется!")
             return

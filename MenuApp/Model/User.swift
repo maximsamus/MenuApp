@@ -27,7 +27,7 @@ struct User {
         }
     }
 
-    func addUser(_ user: User) {
+    func add(user: User) {
         UserData.shared.users.append(user)
     }
 }

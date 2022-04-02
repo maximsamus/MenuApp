@@ -189,7 +189,7 @@
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="9fr-6E-djO"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="1" green="0.83234566450000003" blue="0.47320586440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="dyd-8P-qwm" firstAttribute="centerY" secondItem="CKq-Bh-4Ra" secondAttribute="centerY" constant="-60" id="CJ9-vt-AYy"/>
                             <constraint firstItem="dyd-8P-qwm" firstAttribute="leading" secondItem="9fr-6E-djO" secondAttribute="leading" constant="16" id="Igk-H4-Mxr"/>
@@ -311,7 +311,7 @@
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="D23-TU-pXr"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="1" green="0.83234566450000003" blue="0.47320586440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="I9Q-w5-UOB" firstAttribute="centerY" secondItem="SdM-xj-fEU" secondAttribute="centerY" constant="-140" id="2Yo-Qb-3Oa"/>
                             <constraint firstItem="D23-TU-pXr" firstAttribute="trailing" secondItem="I9Q-w5-UOB" secondAttribute="trailing" constant="20" id="dhi-fq-eYn"/>
@@ -362,7 +362,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="706-0U-l01">
                                         <rect key="frame" x="0.0" y="88" width="280" height="31"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Забронировать"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Забронировать"/>
                                         <connections>
                                             <action selector="bookButtonPressed" destination="4s5-j1-dtq" eventType="touchUpInside" id="kOv-3J-bs8"/>
                                         </connections>
@@ -371,7 +371,7 @@
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="HfS-MF-4xx"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="1" green="0.83234566450000003" blue="0.47320586440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="HvF-bH-ylL" firstAttribute="leading" secondItem="HfS-MF-4xx" secondAttribute="leading" constant="20" id="1HK-W3-w8h"/>
                             <constraint firstItem="HvF-bH-ylL" firstAttribute="top" secondItem="lZI-TD-7uz" secondAttribute="bottom" constant="10" id="Ati-eM-0jz"/>
@@ -436,7 +436,7 @@
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="euS-kw-xno"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="1" green="0.83234566450000003" blue="0.47320586440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="6KG-vQ-Fy7" firstAttribute="leading" secondItem="euS-kw-xno" secondAttribute="leading" constant="16" id="4dj-8h-5Zb"/>
                             <constraint firstItem="6KG-vQ-Fy7" firstAttribute="top" secondItem="euS-kw-xno" secondAttribute="top" constant="16" id="6Wh-LD-7tL"/>
