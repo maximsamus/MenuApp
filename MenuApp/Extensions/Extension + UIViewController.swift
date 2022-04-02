@@ -19,3 +19,9 @@ extension UIViewController {
         present(alert, animated: true, completion: nil)
     }
 }
+
+extension UITextField {
+    func isEmpty() -> Bool {
+        text == "" || text == nil
+    }
+}
