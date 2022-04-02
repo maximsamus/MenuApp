@@ -41,7 +41,7 @@ class BookingViewController: UIViewController {
         
         BookingData.shared.bookings.append(booking)
         showAlert(title: "\(booking.user.firstName ?? "")",
-                  message: "Столик на \(booking.guestsNumber) забронирован на \(booking.date)")
+                  message: "Столик на \(booking.guestsNumber)чел. забронирован на \(booking.date)")
     }
 }
 

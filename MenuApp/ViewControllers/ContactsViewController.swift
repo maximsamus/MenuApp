@@ -27,7 +27,7 @@ class ContactsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        mapImage.image = UIImage(named: "image")
+        mapImage.image = UIImage(named: restaurant.map)
         restaurantLabel.text = restaurant.title
         addressLabel.text = restaurant.address
         phoneLabel.text = "Tel: \(restaurant.numberPhone)"
