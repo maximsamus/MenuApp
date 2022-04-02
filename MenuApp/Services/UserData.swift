@@ -8,11 +8,9 @@
 class UserData {
     static let shared = UserData()
 
-    var users: [User] = []
-    
-    func add(user: User) {
-        users.append(user)
-    }
+    var users: [User] = [
+        User(firstName: "Admin", lastName: nil, email: "admin", password: "admin")
+    ]
     
     private init() {}
 }
