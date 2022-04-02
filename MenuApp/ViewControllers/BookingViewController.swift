@@ -28,7 +28,7 @@ class BookingViewController: UIViewController {
     }
     
     @IBAction func bookButtonPressed() {
-        guard let date = date, !phoneNumberTF.isEmpty(), !guestsTF.isEmpty() else {
+        guard let date = date, !phoneNumberTF.isEmpty, !guestsTF.isEmpty else {
             showAlert(title: "Не все поля заполнены!",
                       message: "Пожалуйста заполните все поля и выберите дату брони!")
             return

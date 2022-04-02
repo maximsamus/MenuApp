@@ -21,7 +21,7 @@ extension UIViewController {
 }
 
 extension UITextField {
-    func isEmpty() -> Bool {
+    var isEmpty: Bool {
         text == "" || text == nil
     }
 }
