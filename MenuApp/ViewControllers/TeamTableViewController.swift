@@ -14,6 +14,7 @@ class TeamTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.rowHeight = 50
+        setupBGImageForTablewView()
     }
     
     // MARK: - Table view data source
@@ -39,6 +40,8 @@ class TeamTableViewController: UITableViewController {
         content.text = developer.fullname
         content.secondaryText = developer.contacts
         cell.contentConfiguration = content
+        cell.backgroundColor = .clear
+        cell.selectionStyle = .none
         return cell
     }
 }

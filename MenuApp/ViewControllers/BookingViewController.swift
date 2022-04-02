@@ -18,8 +18,9 @@ class BookingViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        date = datePicker.date.formatted()
+//        date = datePicker.date.formatted() ?
         navigationItem.hidesBackButton = true
+        setupBackgroundImage()
     }
 
     @IBAction func datePickerAction(_ sender: UIDatePicker) {
@@ -41,7 +42,7 @@ class BookingViewController: UIViewController {
         booking.add(booking: booking)
         showAlert(
             title: "\(booking.user.firstName ?? "")",
-            message: "Столик на \(booking.guestsNumber)чел. забронирован на \(booking.date)"
+            message: "Столик на \(booking.guestsNumber) чел. забронирован на \(booking.date)"
         )
     }
 }

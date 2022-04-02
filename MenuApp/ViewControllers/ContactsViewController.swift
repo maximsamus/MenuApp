@@ -31,6 +31,7 @@ class ContactsViewController: UIViewController {
         restaurantLabel.text = restaurant.title
         addressLabel.text = restaurant.address
         phoneLabel.text = "Tel: \(restaurant.numberPhone)"
+        setupBackgroundImage()
     }
     
     override func viewDidDisappear(_ animated: Bool) {
