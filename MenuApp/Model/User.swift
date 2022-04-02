@@ -6,8 +6,8 @@
     //
 
 struct User {
-    let firstName: String?
-    let lastName: String?
+    var firstName: String?
+    var lastName: String?
     let email: String
     let password: String
 
@@ -19,13 +19,12 @@ struct User {
         UserData.shared.users.contains(where: { $0.email == user.email && $0.password == user.password })
     }
 
-    func getUser(_ user: User) -> User {
-        var returnUser: User!
-        UserData.shared.users.forEach({ testUser in
-            if testUser.email == user.email && testUser.password == user.password {
-                returnUser = testUser }
-        })
-        return returnUser
+    func getUser(_ user: inout User) {
+        
+        UserData.shared.users.forEach { inUser in
+            if inUser.email == user.email && inUser.password == user.password {
+                user = inUser }
+        }
     }
 
     func addUser(_ user: User) {

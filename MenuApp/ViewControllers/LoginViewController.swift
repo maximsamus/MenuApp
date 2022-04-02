@@ -30,9 +30,11 @@ class LoginViewController: UIViewController {
     
     @IBAction func signInPressed() {
         guard let email = usernameTF.text, let password = passwordTF.text else { return }
-        let tempUser = User(firstName: "", lastName: "", email: email, password: password)
-        if tempUser.checkUser(tempUser), tempUser.checkPassword(of: tempUser) {
-            user = tempUser.getUser(tempUser)
+        
+        user = User(email: email, password: password)
+        
+        if user.checkPassword(of: user) {
+            user.getUser(&user)
             performSegue(withIdentifier: "toBookingVC", sender: nil)
         } else {
             showAlert(title: "Invalid login or password",
