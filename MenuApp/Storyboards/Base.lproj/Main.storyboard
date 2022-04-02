@@ -383,7 +383,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="QbP-VP-9s6">
-                        <barButtonItem key="rightBarButtonItem" title="Log out" id="IEN-DX-zGw">
+                        <barButtonItem key="rightBarButtonItem" title="Выйти" id="IEN-DX-zGw">
                             <connections>
                                 <segue destination="OJe-PG-dVI" kind="unwind" unwindAction="unwindFor:" id="tZc-Cf-xfa"/>
                             </connections>

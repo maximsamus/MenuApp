@@ -15,18 +15,24 @@ class SignUpViewController: UIViewController {
     @IBOutlet var passwordTF: UITextField!
     
     @IBAction func saveButtonPressed() {
-        guard emailTF.text != "", passwordTF.text != "" else {
+        
+        guard !emailTF.isEmpty(), !passwordTF.isEmpty() else {
             showAlert(title: "Не все поля заполнены!",
                       message: "Пожалуйста укажите email и пароль!")
             return
         }
         guard let email = emailTF.text, let password = passwordTF.text else { return }
-        let newUser = User(firstName: firstNameTF.text ?? "", lastName: lastNameTF.text ?? "", email: email, password: password)
+        
+        let newUser = User(firstName: firstNameTF.text,
+                           lastName: lastNameTF.text,
+                           email: email,
+                           password: password)
 
         if !newUser.checkUser(newUser) {
             newUser.addUser(newUser)
         } else {
             showAlert(title: "Ошибка!", message: "Данный email уже используется!")
+            return
         }
         dismiss(animated: true)
     }
