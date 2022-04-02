@@ -9,7 +9,8 @@ class UserData {
     static let shared = UserData()
 
     var users: [User] = [
-        User(firstName: "Admin", lastName: nil, email: "admin", password: "admin")
+        User(firstName: "Admin", lastName: nil, email: "admin", password: "admin"),
+        User(email: "a", password: "a")
     ]
     
     private init() {}

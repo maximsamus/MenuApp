@@ -10,4 +10,8 @@ struct Booking {
     let phoneNumber: String
     let guestsNumber: String
     let date: String
+
+    func addBook(_ book: Booking) {
+        BookingData.shared.bookings.append(book)
+    }
 }

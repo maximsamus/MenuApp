@@ -13,7 +13,11 @@ class MenuTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.view.backgroundColor = .clear
+        navigationController?.navigationBar.isTranslucent = true
         tableView.rowHeight = 80
+        tableView.backgroundView = UIImageView(image: UIImage(named: "view"))
+        tableView.backgroundView?.isOpaque = false
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -22,6 +26,7 @@ class MenuTableViewController: UITableViewController {
     }
     
     // MARK: - Navigation
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let detailVC = segue.destination as? DetailViewController else { return }
         detailVC.food = sender as? Food
@@ -53,6 +58,7 @@ class MenuTableViewController: UITableViewController {
         content.image = UIImage(named: food.image)
         content.imageProperties.cornerRadius = tableView.rowHeight / 2
         cell.contentConfiguration = content
+        cell.backgroundColor = .clear
         return cell
     }
 }
