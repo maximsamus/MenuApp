@@ -14,6 +14,7 @@ extension UIViewController {
         let okAction = UIAlertAction(title: "OK", style: .default) { _ in
             textField?.text = ""
         }
+        
         alert.addAction(okAction)
         present(alert, animated: true, completion: nil)
     }

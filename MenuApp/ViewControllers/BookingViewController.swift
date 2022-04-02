@@ -19,7 +19,6 @@ class BookingViewController: UIViewController {
         super.viewDidLoad()
         navigationItem.hidesBackButton = true
     }
-    
 
     @IBAction func datePickerAction(_ sender: UIDatePicker) {
         let formatter = DateFormatter()
