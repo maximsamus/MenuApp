@@ -28,7 +28,7 @@ class BookingViewController: UIViewController {
     }
     
     @IBAction func bookButtonPressed() {
-        guard let date = date, !phoneNumberTF.isEmpty(), !guestsTF.isEmpty() else {
+        guard let date = date, !phoneNumberTF.isEmpty, !guestsTF.isEmpty else {
             showAlert(title: "Не все поля заполнены!",
                       message: "Пожалуйста заполните все поля и выберите дату брони!")
             return
@@ -41,7 +41,7 @@ class BookingViewController: UIViewController {
         
         BookingData.shared.bookings.append(booking)
         showAlert(title: "\(booking.user.firstName ?? "")",
-                  message: "Столик на \(booking.guestsNumber) забронирован на \(booking.date)")
+                  message: "Столик на \(booking.guestsNumber)чел. забронирован на \(booking.date)")
     }
 }
 

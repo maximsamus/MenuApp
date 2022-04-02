@@ -16,7 +16,7 @@ class SignUpViewController: UIViewController {
     
     @IBAction func saveButtonPressed() {
         
-        guard !emailTF.isEmpty(), !passwordTF.isEmpty() else {
+        guard !emailTF.isEmpty, !passwordTF.isEmpty else {
             showAlert(title: "Не все поля заполнены!",
                       message: "Пожалуйста укажите email и пароль!")
             return

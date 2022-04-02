@@ -37,8 +37,8 @@ class LoginViewController: UIViewController {
             user.getUser(&user)
             performSegue(withIdentifier: "toBookingVC", sender: nil)
         } else {
-            showAlert(title: "Invalid login or password",
-                      message: "Please, enter correct login and password",
+            showAlert(title: "Неверный email или пароль!",
+                      message: "Пожалуйста введите правильный email и пароль!",
                       textField: passwordTF)
         }
     }
