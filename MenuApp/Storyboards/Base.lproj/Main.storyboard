@@ -390,6 +390,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="datePicker" destination="lZI-TD-7uz" id="7Xy-Hw-no0"/>
                         <outlet property="guestsTF" destination="8ic-UD-9lC" id="PYZ-Ps-dFW"/>
                         <outlet property="phoneNumberTF" destination="exX-zN-M4e" id="phW-u7-nTX"/>
                     </connections>
