@@ -11,7 +11,7 @@ struct Booking {
     let guestsNumber: String
     let date: String
 
-    func addBook(_ book: Booking) {
-        BookingData.shared.bookings.append(book)
+    func add(booking: Booking) {
+        BookingData.shared.bookings.append(booking)
     }
 }

@@ -18,6 +18,7 @@ class MenuTableViewController: UITableViewController {
         tableView.rowHeight = 80
         tableView.backgroundView = UIImageView(image: UIImage(named: "view"))
         tableView.backgroundView?.isOpaque = false
+        tableView.backgroundView?.alpha = 0.2
     }
 
     override func viewWillAppear(_ animated: Bool) {
