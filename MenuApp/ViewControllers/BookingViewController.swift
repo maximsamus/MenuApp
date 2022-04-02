@@ -9,6 +9,7 @@ import UIKit
 
 class BookingViewController: UIViewController {
     
+    @IBOutlet weak var datePicker: UIDatePicker!
     @IBOutlet var guestsTF: UITextField!
     @IBOutlet var phoneNumberTF: UITextField!
     
@@ -17,31 +18,31 @@ class BookingViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        date = datePicker.date.formatted()
         navigationItem.hidesBackButton = true
     }
 
     @IBAction func datePickerAction(_ sender: UIDatePicker) {
-        let formatter = DateFormatter()
-        formatter.dateStyle = .medium
-        formatter.timeStyle = .short
-        date = formatter.string(from: sender.date)
+        date = sender.date.formatted()
     }
     
     @IBAction func bookButtonPressed() {
         guard let date = date, !phoneNumberTF.isEmpty, !guestsTF.isEmpty else {
-            showAlert(title: "Не все поля заполнены!",
-                      message: "Пожалуйста заполните все поля и выберите дату брони!")
+            showAlert(
+                title: "Не все поля заполнены!",
+                message: "Пожалуйста заполните все поля и выберите дату брони!"
+            )
             return
         }
-        
         let booking = Booking(user: user,
                               phoneNumber: phoneNumberTF.text ?? "",
                               guestsNumber: guestsTF.text ?? "",
                                  date: date)
-        
-        BookingData.shared.bookings.append(booking)
-        showAlert(title: "\(booking.user.firstName ?? "")",
-                  message: "Столик на \(booking.guestsNumber)чел. забронирован на \(booking.date)")
+        booking.addBook(booking)
+        showAlert(
+            title: "\(booking.user.firstName ?? "")",
+            message: "Столик на \(booking.guestsNumber)чел. забронирован на \(booking.date)"
+        )
     }
 }
 
