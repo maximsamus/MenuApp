@@ -8,7 +8,6 @@
 import UIKit
 
 class BookingViewController: UIViewController {
-    
     @IBOutlet weak var datePicker: UIDatePicker!
     @IBOutlet var guestsTF: UITextField!
     @IBOutlet var phoneNumberTF: UITextField!
@@ -18,13 +17,13 @@ class BookingViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-//        date = datePicker.date.formatted() ?
+        date = datePicker.date.formatted()
         navigationItem.hidesBackButton = true
         setupBackgroundImage()
     }
 
-    @IBAction func datePickerAction(_ sender: UIDatePicker) {
-        date = sender.date.formatted()
+    @IBAction func datePickerAction() {
+        date = datePicker.date.formatted()
     }
     
     @IBAction func bookButtonPressed() {
@@ -35,11 +34,14 @@ class BookingViewController: UIViewController {
             )
             return
         }
-        let booking = Booking(user: user,
-                              phoneNumber: phoneNumberTF.text ?? "",
-                              guestsNumber: guestsTF.text ?? "",
-                                 date: date)
+        let booking = Booking(
+            user: user,
+            phoneNumber: phoneNumberTF.text ?? "",
+            guestsNumber: guestsTF.text ?? "",
+            date: date
+        )
         booking.add(booking: booking)
+        
         showAlert(
             title: "\(booking.user.firstName ?? "")",
             message: "Столик на \(booking.guestsNumber) чел. забронирован на \(booking.date)"

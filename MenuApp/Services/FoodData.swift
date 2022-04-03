@@ -1,16 +1,16 @@
-//
-//  FoodData.swift
-//  MenuApp
-//
-//  Created by Konstantin Fomenkov on 25.03.2022.
-//
+    //
+    //  FoodData.swift
+    //  MenuApp
+    //
+    //  Created by Konstantin Fomenkov on 25.03.2022.
+    //
 
 class FoodData {
     static let shared = FoodData()
     
     let names = [
         "Борщ", "Сырный суп", "Грибной суп", "Пицца",
-        "Лазанья", "Паста", "Медовик", "Сорбет", "Чай с жасмином", "Капучино"
+        "Лазанья", "Паста", "Медовик", "Сорбет", "Чай", "Капучино"
     ]
     let images = [
         "borsch", "cheese", "mushroom", "pizza", "lasagna",
@@ -80,6 +80,5 @@ class FoodData {
            Вкус капучино идеально сбалансирован.
            """
     ]
-    
     private init() {}
 }

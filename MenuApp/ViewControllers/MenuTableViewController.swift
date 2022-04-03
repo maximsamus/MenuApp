@@ -1,22 +1,19 @@
-//
-//  MenuTableViewController.swift
-//  MenuApp
-//
-//  Created by Paul Matar on 25.03.2022.
-//
+    //
+    //  MenuTableViewController.swift
+    //  MenuApp
+    //
+    //  Created by Paul Matar on 25.03.2022.
+    //
 
 import UIKit
 
 class MenuTableViewController: UITableViewController {
-    
     private let menu = Menu.getMenu()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-//        navigationController?.view.backgroundColor = .clear ?
-//        navigationController?.navigationBar.isTranslucent = true ?
         tableView.rowHeight = 80
-        setupBGImageForTablewView()
+        setupBackgroundImageTableView()
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -24,14 +21,14 @@ class MenuTableViewController: UITableViewController {
         navigationController?.navigationBar.topItem?.title = "Меню"
     }
     
-    // MARK: - Navigation
+        // MARK: - Navigation
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let detailVC = segue.destination as? DetailViewController else { return }
         detailVC.food = sender as? Food
     }
 
-    // MARK: - Table view data source
+        // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         return menu.count
@@ -47,10 +44,8 @@ class MenuTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "menu", for: indexPath)
-        
-        
         let food = menu[indexPath.section].food[indexPath.row]
-        
+
         var content = cell.defaultContentConfiguration()
         content.text = food.name
         content.secondaryText = food.shortDescription
@@ -62,7 +57,8 @@ class MenuTableViewController: UITableViewController {
     }
 }
 
-// MARK: - UITableViewDelegate
+    // MARK: - UITableViewDelegate
+
 extension MenuTableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let food = menu[indexPath.section].food[indexPath.row]

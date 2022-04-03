@@ -11,17 +11,17 @@ class LoginViewController: UIViewController {
     @IBOutlet var usernameTF: UITextField!
     @IBOutlet var passwordTF: UITextField!
     
-    var user: User!
-    
+    private var user: User!
+
+    override func viewDidLoad() {
+        setupBackgroundImage()
+    }
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.navigationBar.topItem?.title = "Профиль"
     }
-    
-    override func viewDidLoad() {
-        setupBackgroundImage()
-    }
-    
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let bookingVC = segue.destination as? BookingViewController else { return}
         bookingVC.user = user
@@ -41,14 +41,14 @@ class LoginViewController: UIViewController {
             user.getUser(&user)
             performSegue(withIdentifier: "toBookingVC", sender: nil)
         } else {
-            showAlert(title: "Неверный email или пароль!",
-                      message: "Пожалуйста введите правильный email и пароль!",
-                      textField: passwordTF)
+            showAlert(
+                title: "Неверный email или пароль!",
+                message: "Пожалуйста введите правильный email и пароль!",
+                textField: passwordTF
+            )
         }
     }
 }
-
-
 
 // MARK: - UITextFieldDelegate
 extension LoginViewController: UITextFieldDelegate {

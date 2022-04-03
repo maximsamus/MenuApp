@@ -10,14 +10,14 @@ struct Menu {
     let food: [Food]
     
     static func getMenu() -> [Menu] {
-        let foodData = Food.getMenu()
-
+        let foodData = Food.getFood()
+        
         var menu: [Menu] = []
         var soups: [Food] = []
         var mains: [Food] = []
         var desserts: [Food] = []
         var drinks: [Food] = []
-
+        
         for food in foodData {
             switch food.category {
             case .soups:
@@ -30,18 +30,16 @@ struct Menu {
                 drinks.append(food)
             }
         }
-        
         menu.append(Menu(category: .soups, food: soups))
         menu.append(Menu(category: .mains, food: mains))
         menu.append(Menu(category: .desserts, food: desserts))
         menu.append(Menu(category: .drinks, food: drinks))
-
+        
         return menu
     }
 }
 
 struct Food {
-
     let name: String
     let image: String
     let price: Int
@@ -49,7 +47,7 @@ struct Food {
     let weight: Int
     let description: String
     let category: CategoryType
-
+    
     var shortDescription: String {
         "Блюдо весит \(weight) грамм и стоит \(price) рублей"
     }
@@ -63,10 +61,10 @@ enum CategoryType: String {
 }
 
 extension Food {
-    static func getMenu() -> [Food] {
-
+    static func getFood() -> [Food] {
+        
         var foods: [Food] = []
-
+        
         let names = FoodData.shared.names
         let images = FoodData.shared.images
         let prices = FoodData.shared.prices
@@ -74,7 +72,7 @@ extension Food {
         let weights = FoodData.shared.weights
         let descriptions = FoodData.shared.descriptions
         let categories = FoodData.shared.categories
-
+        
         let iterations = min(
             names.count,
             images.count,
@@ -84,7 +82,7 @@ extension Food {
             categories.count,
             descriptions.count
         )
-
+        
         for index in 0..<iterations {
             let food = Food(
                 name: names[index],
