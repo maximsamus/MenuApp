@@ -9,9 +9,7 @@ struct Developer {
     let fullname: String
     let position: Position
     let contacts: String
-}
 
-extension Developer {
     static func getTeam() -> [Developer] {
         [
             Developer(
@@ -37,8 +35,9 @@ extension Developer {
         ]
     }
 }
-
-enum Position: String {
-    case teamLead = "Team Lead"
-    case developer = "Developer"
+extension Developer {
+    enum Position: String {
+        case teamLead = "Team Lead"
+        case developer = "Developer"
+    }
 }

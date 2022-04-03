@@ -1,9 +1,9 @@
-//
-//  Extension + UIViewController.swift
-//  MenuApp
-//
-//  Created by Paul Matar on 01.04.2022.
-//
+    //
+    //  Extension + UIViewController.swift
+    //  MenuApp
+    //
+    //  Created by Paul Matar on 01.04.2022.
+    //
 
 import UIKit
 
@@ -13,7 +13,6 @@ extension UIViewController {
         let okAction = UIAlertAction(title: "OK", style: .default) { _ in
             textField?.text = ""
         }
-        
         alert.addAction(okAction)
         present(alert, animated: true, completion: nil)
     }

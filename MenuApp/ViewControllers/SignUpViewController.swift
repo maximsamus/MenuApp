@@ -8,7 +8,6 @@
 import UIKit
 
 class SignUpViewController: UIViewController {
-    
     @IBOutlet var firstNameTF: UITextField!
     @IBOutlet var lastNameTF: UITextField!
     @IBOutlet var emailTF: UITextField!
@@ -19,23 +18,28 @@ class SignUpViewController: UIViewController {
     }
     
     @IBAction func saveButtonPressed() {
-        
         guard !emailTF.isEmpty, !passwordTF.isEmpty else {
-            showAlert(title: "Не все поля заполнены!",
-                      message: "Пожалуйста укажите email и пароль!")
+            showAlert(
+                title: "Не все поля заполнены!",
+                message: "Пожалуйста укажите email и пароль!"
+            )
             return
         }
         guard let email = emailTF.text, let password = passwordTF.text else { return }
         
-        let newUser = User(firstName: firstNameTF.text,
-                           lastName: lastNameTF.text,
-                           email: email,
-                           password: password)
-
+        let newUser = User(
+            firstName: firstNameTF.text,
+            lastName: lastNameTF.text,
+            email: email,
+            password: password
+        )
         if !newUser.checkUser(newUser) {
             newUser.add(user: newUser)
         } else {
-            showAlert(title: "Ошибка!", message: "Данный email уже используется!")
+            showAlert(
+                title: "Ошибка!",
+                message: "Данный email уже используется!"
+            )
             return
         }
         dismiss(animated: true)
@@ -43,8 +47,8 @@ class SignUpViewController: UIViewController {
 }
 
     // MARK: - UITextFieldDelegate
+
 extension SignUpViewController: UITextFieldDelegate {
-    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
         view.endEditing(true)
@@ -63,5 +67,4 @@ extension SignUpViewController: UITextFieldDelegate {
         }
         return true
     }
-    
 }

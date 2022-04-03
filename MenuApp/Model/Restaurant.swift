@@ -6,20 +6,8 @@
     //
 
 struct Restaurant {
-    let title: String
-    let address: String
-    let numberPhone: String
-    let map: String
-}
-
-extension Restaurant {
-    
-    static func getContact() -> Restaurant {
-        Restaurant(
-            title: "Pizzeria 'Маленькая Сицилия'",
-            address: "ул.Трубная, 21, Москва 127051",
-            numberPhone: "+7(495)111-22-33", 
-            map: "image"
-        )
-    }
+    let title = "Pizzeria 'Маленькая Сицилия'"
+    let address = "ул.Трубная, 21, Москва 127051"
+    let numberPhone = "+7(495)111-22-33"
+    let map = "image"
 }
