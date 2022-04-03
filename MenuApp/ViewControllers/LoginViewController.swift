@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol SignUpVCDelegate {
+    func setEmail(with user: User)
+}
+
 class LoginViewController: UIViewController {
     @IBOutlet var usernameTF: UITextField!
     @IBOutlet var passwordTF: UITextField!
@@ -23,8 +27,13 @@ class LoginViewController: UIViewController {
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let bookingVC = segue.destination as? BookingViewController else { return}
-        bookingVC.user = user
+        if segue.identifier == "toSignUpVC" {
+            guard let signUpVC = segue.destination as? SignUpViewController else { return }
+            signUpVC.delegate = self
+        } else {
+            guard let bookingVC = segue.destination as? BookingViewController else { return}
+            bookingVC.user = user
+        }
     }
     
     @IBAction func unwind(for segue: UIStoryboardSegue) {
@@ -66,5 +75,11 @@ extension LoginViewController: UITextFieldDelegate {
             signInPressed()
         }
         return true
+    }
+}
+
+extension LoginViewController: SignUpVCDelegate {
+    func setEmail(with user: User) {
+        usernameTF.text = user.email
     }
 }
