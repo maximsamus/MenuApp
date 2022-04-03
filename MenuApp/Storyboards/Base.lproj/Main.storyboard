@@ -174,7 +174,7 @@
                                                     <color key="baseForegroundColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <segue destination="9XE-gX-DKb" kind="presentation" id="OYb-Eu-mfb"/>
+                                                    <segue destination="9XE-gX-DKb" kind="presentation" identifier="toSignUpVC" id="OYb-Eu-mfb"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eq3-IW-tYn">

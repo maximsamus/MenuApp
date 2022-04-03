@@ -13,6 +13,8 @@ class SignUpViewController: UIViewController {
     @IBOutlet var emailTF: UITextField!
     @IBOutlet var passwordTF: UITextField!
     
+    var delegate: SignUpVCDelegate!
+    
     override func viewDidLoad() {
         setupBackgroundImage()
     }
@@ -42,6 +44,7 @@ class SignUpViewController: UIViewController {
             )
             return
         }
+        delegate?.setEmail(with: newUser)
         dismiss(animated: true)
     }
 }
