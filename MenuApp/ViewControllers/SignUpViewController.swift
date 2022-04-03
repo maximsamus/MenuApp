@@ -13,7 +13,7 @@ class SignUpViewController: UIViewController {
     @IBOutlet var emailTF: UITextField!
     @IBOutlet var passwordTF: UITextField!
     
-    var delegate: SignUpVCDelegate!
+    weak var delegate: SignUpVCDelegate?
     
     override func viewDidLoad() {
         setupBackgroundImage()

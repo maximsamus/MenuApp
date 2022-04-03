@@ -7,7 +7,7 @@
 
 import UIKit
 
-protocol SignUpVCDelegate {
+protocol SignUpVCDelegate: AnyObject {
     func setEmail(with user: User)
 }
 
