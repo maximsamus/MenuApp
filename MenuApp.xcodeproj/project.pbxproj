@@ -81,7 +81,7 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		D14990A627EE5A2B00DC0A0D /* Model */ = {
+		D14990A627EE5A2B00DC0A0D /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				D14990A427EE5A2200DC0A0D /* Food.swift */,
@@ -90,7 +90,7 @@
 				41CEF62827EE7555003F3B95 /* Restaurant.swift */,
 				CF88FB7627F70033007A9BE4 /* Booking.swift */,
 			);
-			path = Model;
+			path = Models;
 			sourceTree = "<group>";
 		};
 		D14990A727EE604200DC0A0D /* Services */ = {
@@ -124,7 +124,7 @@
 			children = (
 				CF968E2327F751E6007BB5AA /* Extensions */,
 				D14990A727EE604200DC0A0D /* Services */,
-				D14990A627EE5A2B00DC0A0D /* Model */,
+				D14990A627EE5A2B00DC0A0D /* Models */,
 				F71586CE27EE37DE007C9639 /* App */,
 				F71586CB27EE36F7007C9639 /* ViewControllers */,
 				F71586CC27EE3706007C9639 /* Storyboards */,
