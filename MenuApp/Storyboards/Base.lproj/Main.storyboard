@@ -343,7 +343,7 @@
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="lZI-TD-7uz">
                                 <rect key="frame" x="16" y="91" width="288" height="63"/>
                                 <connections>
-                                    <action selector="datePickerAction:" destination="4s5-j1-dtq" eventType="valueChanged" id="Q7N-mT-DsL"/>
+                                    <action selector="datePickerAction" destination="4s5-j1-dtq" eventType="valueChanged" id="4qD-7U-34A"/>
                                 </connections>
                             </datePicker>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="HvF-bH-ylL">
