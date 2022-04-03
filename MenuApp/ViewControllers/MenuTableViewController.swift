@@ -19,6 +19,7 @@ class MenuTableViewController: UITableViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.navigationBar.topItem?.title = "Меню"
+        tabBarController?.tabBar.tintColor = UIColor.orange
     }
     
         // MARK: - Navigation
