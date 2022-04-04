@@ -1,9 +1,9 @@
-    //
-    //  Restaurant.swift
-    //  MenuApp
-    //
-    //  Created by Konstantin Fomenkov on 26.03.2022.
-    //
+//
+//  Restaurant.swift
+//  MenuApp
+//
+//  Created by Konstantin Fomenkov on 26.03.2022.
+//
 
 struct Restaurant {
     let title = "Pizzeria 'Маленькая Сицилия'"

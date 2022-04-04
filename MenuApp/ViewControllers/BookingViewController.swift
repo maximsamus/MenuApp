@@ -14,14 +14,14 @@ class BookingViewController: UIViewController {
     
     var user: User!
     private var date: String!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         date = datePicker.date.formatted()
         navigationItem.hidesBackButton = true
         setupBackgroundImage()
     }
-
+    
     @IBAction func datePickerAction() {
         date = datePicker.date.formatted()
     }

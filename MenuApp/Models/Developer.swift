@@ -1,15 +1,15 @@
-    //
-    //  Developer.swift
-    //  MenuApp
-    //
-    //  Created by Konstantin Fomenkov on 26.03.2022.
-    //
+//
+//  Developer.swift
+//  MenuApp
+//
+//  Created by Konstantin Fomenkov on 26.03.2022.
+//
 
 struct Developer {
     let fullname: String
     let position: Position
     let contacts: String
-
+    
     static func getTeam() -> [Developer] {
         [
             Developer(

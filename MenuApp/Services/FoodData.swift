@@ -1,9 +1,9 @@
-    //
-    //  FoodData.swift
-    //  MenuApp
-    //
-    //  Created by Konstantin Fomenkov on 25.03.2022.
-    //
+//
+//  FoodData.swift
+//  MenuApp
+//
+//  Created by Konstantin Fomenkov on 25.03.2022.
+//
 
 class FoodData {
     static let shared = FoodData()

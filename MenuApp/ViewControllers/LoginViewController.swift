@@ -16,16 +16,16 @@ class LoginViewController: UIViewController {
     @IBOutlet var passwordTF: UITextField!
     
     private var user: User!
-
+    
     override func viewDidLoad() {
         setupBackgroundImage()
     }
-
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.navigationBar.topItem?.title = "Профиль"
     }
-
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toSignUpVC" {
             guard let signUpVC = segue.destination as? SignUpViewController else { return }

@@ -1,9 +1,9 @@
-    //
-    //  User.swift
-    //  MenuApp
-    //
-    //  Created by Paul Matar on 30.03.2022.
-    //
+//
+//  User.swift
+//  MenuApp
+//
+//  Created by Paul Matar on 30.03.2022.
+//
 
 struct User {
     var firstName: String?

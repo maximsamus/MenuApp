@@ -26,7 +26,7 @@ class DetailViewController: UIViewController {
         if food.category == .drinks {
             weightLabel.text = "\(food.weight)мл"
         } else {
-        weightLabel.text = "\(food.weight)гр"
+            weightLabel.text = "\(food.weight)гр"
         }
         
         priceLabel.text = "\(food.price)руб"

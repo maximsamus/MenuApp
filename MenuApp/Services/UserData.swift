@@ -1,9 +1,9 @@
-    //
-    //  UserData.swift
-    //  MenuApp
-    //
-    //  Created by Paul Matar on 30.03.2022.
-    //
+//
+//  UserData.swift
+//  MenuApp
+//
+//  Created by Paul Matar on 30.03.2022.
+//
 
 class UserData {
     static let shared = UserData()

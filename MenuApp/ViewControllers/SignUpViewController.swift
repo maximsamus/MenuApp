@@ -1,9 +1,9 @@
-    //
-    //  SignUpViewController.swift
-    //  MenuApp
-    //
-    //  Created by Paul Matar on 30.03.2022.
-    //
+//
+//  SignUpViewController.swift
+//  MenuApp
+//
+//  Created by Paul Matar on 30.03.2022.
+//
 
 import UIKit
 
@@ -49,7 +49,7 @@ class SignUpViewController: UIViewController {
     }
 }
 
-    // MARK: - UITextFieldDelegate
+// MARK: - UITextFieldDelegate
 
 extension SignUpViewController: UITextFieldDelegate {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
